@@ -4,9 +4,15 @@
 					<a href="#" id="logo">JHunt</a>
 					<nav>
 						<ul>
-							<li><a href="#">Explore</a></li>
-							<li><a href="#">Login</a></li>
-							<li><a href="#">Sign Up</a></li>
+							<% unless company_signed_in? %>
+								<li><a href="#">Explore</a></li>
+								<li><%= link_to "Sign In", new_company_session_path %></li>
+								<li><%= link_to "Post A Job", new_company_registration_path %></li>
+							<% else %>
+								<li><a href="#">Dashboard</a></li>
+								<li><a href="#">Explore</a></li>							
+								<li><%= link_to "Sign Out", destroy_company_session_path, method: :delete %></li>
+							<% end %>
 						</ul>
 					</nav>
 				</div>
@@ -14,7 +20,7 @@
 
 			<div class="wrapper_skinny">
 				<h1>Meritocratic job searching</h1>
-				<a href="#" class="button button_highlight">Enroll Your Company</a>
-				<a href="#" class="button button_white">Find a Job</a>			
+				<%= link_to "Enroll Your Company", new_company_registration_path, class: "button button_highlight" %>
+				<a href="#" class="button button_white">Explore</a>			
 			</div>
 		</div>	
