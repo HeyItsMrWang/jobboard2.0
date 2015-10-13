@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
 
 
+  devise_for :companies
   root 'welcome#index'
 
   # Example of regular route:
