@@ -245,15 +245,15 @@ BANNER
 }
 
 .companies_banner{
-	background-image: url(../images/staring_lake.jpg);
+	background-image: image-url("staring_lake.jpg");
 }
 
 .sign_in_banner{
-	background-image: url(../images/tea_break.jpg);
+	background-image: image-url("tea_break.jpg");
 }
 
 .sign_up_banner{
-	background-image: url(../images/hipster_desk.jpg);
+	background-image: image-url("hipster_desk.jpg");
 }
 
 
@@ -480,9 +480,60 @@ textarea{
 
 
 
+/**
+COMPANIES
+ */
 
+#companies{
+	padding-bottom: 3rem;
+}
 
+#companies ul{
+	list-style: none;
+	padding-left: 0;
+	margin: 0;
+}
 
+#companies ul li{
+	display: inline;
+	width: 23%;
+	float: left;
+	margin: 0 1% 2rem 1%;
+	-webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,0.25);
+	box-shadow: 0 1px 1px 0 rgba(0,0,0,0.25);
+	border-radius: .35rem;
+}
+
+#companies ul li img{
+	width: 100%;
+	max-width: 100%;
+	border-radius: .35rem .35rem 0 0;	
+}
+
+.company_overview{
+	padding: 1rem 7.5%;
+}
+
+.company_overview h2{
+	margin: 0;
+	font-size: 1rem;
+	font-weight: 700;
+	color: black;
+}
+
+.job_count{
+	color:gray;
+	font-size: .9rem;
+	margin: .5rem 0 .25rem 0;
+}
+
+#companies ul li:hover img{
+	opacity: .8;
+}
+
+#companies ul li:hover .company_overview h2{
+	color: #d2674e;
+}
 
 
 
